@@ -10,7 +10,7 @@ function Team(props) {
             <div className="col s12 m6">
               <div className="card blue-grey darken-1">
                 <div className="card-content white-text">
-                  <span className="card-title">{member.name}</span>
+                  <span className="card-title">Name: {member.name}</span>
                   <p>Please Email me at: {member.email}</p>
                   <p>Role: {member.role}</p>
                 </div>
