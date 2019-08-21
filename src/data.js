@@ -1,4 +1,4 @@
-const teamData = [
+export default [
   {
     id: 1,
     name: 'Rockey',
@@ -6,5 +6,3 @@ const teamData = [
     role: 'Software Enginer'
   }
 ];
-
-export default teamData;

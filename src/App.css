@@ -25,6 +25,7 @@
 
 #root>div>div:nth-child(2)>div>div {
   margin-left: 375px;
+  margin-top: 40px;
 }
 
 @keyframes App-logo-spin {

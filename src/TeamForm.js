@@ -49,7 +49,7 @@ function TeamForm(props) {
           onChange={changeHandler}
         />
 
-        <label htmlFor="role">Email</label>
+        <label htmlFor="role">Role</label>
         <input
           type="text"
           name="role"

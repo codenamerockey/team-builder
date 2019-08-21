@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import teamData from './data';
+import data from './data';
 import Team from './Team';
 import TeamForm from './TeamForm';
 import './App.css';
 
 function App() {
-  const [teamMember, setTeamMember] = useState([teamData]);
+  const [teamMember, setTeamMember] = useState(data);
 
   const addNewTeamMember = newMember => {
     setTeamMember([...teamMember, newMember]);
