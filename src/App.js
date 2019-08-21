@@ -7,15 +7,15 @@ import './App.css';
 function App() {
   const [teamMember, setTeamMember] = useState([teamData]);
 
-  const addNewTeamMember = () => {
-    setTeamMember(...teamMember, teamMember);
+  const addNewTeamMember = newMember => {
+    setTeamMember([...teamMember, newMember]);
   };
 
   console.log(teamMember);
   return (
     <div className="App">
       <TeamForm addNewTeamMember={addNewTeamMember} />
-      <Team data={teamData} />
+      <Team teamList={teamMember} />
     </div>
   );
 }

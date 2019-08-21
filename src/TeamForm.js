@@ -8,6 +8,12 @@ function TeamForm(props) {
     role: ''
   });
 
+  const changeHandler = event => {
+    //computed property
+    console.log(event.target.value);
+    setTeamMember({ ...teamMember, [event.target.name]: event.target.value });
+  };
+
   const submitForm = event => {
     event.preventDefault(); // prevent default from form
     const newTeamMember = {
@@ -30,8 +36,8 @@ function TeamForm(props) {
           type="text"
           name="name"
           placeholder="Please enter your name"
-          /*value
-        //onChange*/
+          value={teamMember.name}
+          onChange={changeHandler}
         />
 
         <label htmlFor="email">Email</label>
@@ -39,8 +45,8 @@ function TeamForm(props) {
           type="email"
           name="email"
           placeholder="Enter email here"
-          /*value={}
-        onChange={} */
+          value={teamMember.email}
+          onChange={changeHandler}
         />
 
         <label htmlFor="role">Email</label>
@@ -48,9 +54,12 @@ function TeamForm(props) {
           type="text"
           name="role"
           placeholder="Enter your role here"
-          /*value={}
-        onChange={} */
+          value={teamMember.role}
+          onChange={changeHandler}
         />
+        <button className="btn waves-effect waves-light" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

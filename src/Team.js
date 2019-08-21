@@ -1,20 +1,24 @@
 import React, { useState } from 'react';
 
-function Team() {
+function Team(props) {
   return (
-    <div className="row">
-      <div className="col s12 m6">
-        <div className="card blue-grey darken-1">
-          <div className="card-content white-text">
-            <span className="card-title">Card Title</span>
-            <p>
-              I am a very simple card. I am good at containing small bits of
-              information. I am convenient because I require little markup to
-              use effectively.
-            </p>
+    <div>
+      {props.teamList.map(member => {
+        console.log(member);
+        return (
+          <div className="row">
+            <div className="col s12 m6">
+              <div className="card blue-grey darken-1">
+                <div className="card-content white-text">
+                  <span className="card-title">Name:{member.name}</span>
+                  <p>Please Email me at:{member.email}</p>
+                  <p>Role:{member.role}</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        );
+      })}
     </div>
   );
 }
