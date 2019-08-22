@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function Team(props) {
   return (
+    //Div returning a card with the team data dynamically extracted
     <div>
+      {/* props passed in from Team component inside App.js and used to map over and return the card for the team member, card design from material design */}
       {props.teamList.map(member => {
         console.log(member);
+
         return (
           <div className="row" key={member.id}>
             <div className="col s12 m6">
